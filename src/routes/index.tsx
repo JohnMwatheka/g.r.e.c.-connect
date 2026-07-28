@@ -598,7 +598,8 @@ function Index() {
         {/* CONTACT / VISIT */}
         <section id="contact" className="section-y bg-surface">
           <div className="shell grid gap-12 lg:grid-cols-2 lg:gap-16">
-            <Reveal id="visit">
+            <Reveal>
+              <span id="visit" className="block scroll-mt-28" />
               <p className="text-xs font-semibold tracking-[0.2em] text-destructive uppercase">
                 Plan Your Visit
               </p>
