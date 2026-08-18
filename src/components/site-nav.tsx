@@ -46,11 +46,15 @@ export function SiteNav() {
         <a href="#home" className="flex min-w-0 items-center gap-3">
           <span
             className={cn(
-              "grid size-11 shrink-0 place-items-center rounded-full transition-colors",
-              scrolled || open ? "gradient-sky" : "bg-background/15 backdrop-blur",
+              "grid size-12 shrink-0 place-items-center overflow-hidden rounded-full transition-colors",
+              scrolled || open ? "bg-background" : "bg-background/90 backdrop-blur",
             )}
           >
-            <Cross className="size-5 text-destructive" strokeWidth={2.5} />
+            <img
+              src={logoAsset.url}
+              alt="Gospel Revival Evangelistic Church logo"
+              className="size-11 object-contain"
+            />
           </span>
           <span className="min-w-0">
             <span
