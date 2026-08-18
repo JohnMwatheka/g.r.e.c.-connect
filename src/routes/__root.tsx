@@ -78,6 +78,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "author", content: "Gospel Revival Evangelistic Church" },
+      { name: "application-name", content: "G.R.E.C." },
+      { name: "apple-mobile-web-app-title", content: "G.R.E.C." },
+      { name: "theme-color", content: "#1F4E9D" },
+      { property: "og:site_name", content: "Gospel Revival Evangelistic Church (G.R.E.C.)" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -93,8 +97,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap",
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
+      { rel: "manifest", href: "/site.webmanifest" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Church",
+          name: "Gospel Revival Evangelistic Church",
+          alternateName: "G.R.E.C. — The Lord's Fellowship Centre",
+          url: "/",
+        }),
+      },
     ],
   }),
+
 
   shellComponent: RootShell,
   component: RootComponent,
