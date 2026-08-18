@@ -1,0 +1,13 @@
+{
+  "name": "Gospel Revival Evangelistic Church (G.R.E.C.)",
+  "short_name": "G.R.E.C.",
+  "description": "Gospel Revival Evangelistic Church — The Lord's Fellowship Centre.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#1F4E9D",
+  "icons": [
+    { "src": "/favicon.png", "sizes": "64x64", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
