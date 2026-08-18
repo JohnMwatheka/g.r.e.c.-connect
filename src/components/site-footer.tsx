@@ -1,4 +1,5 @@
-import { Cross, Facebook, Instagram, Youtube, Mail } from "lucide-react";
+import { Facebook, Instagram, Youtube, Mail } from "lucide-react";
+import logoAsset from "@/assets/grec-logo.png.asset.json";
 
 const quickLinks = ["About", "Sermons", "Events", "Gallery", "Give", "Contact"];
 const ministries = [
@@ -16,8 +17,12 @@ export function SiteFooter() {
       <div className="shell grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4 lg:py-20">
         <div>
           <div className="flex items-center gap-3">
-            <span className="grid size-11 place-items-center rounded-full bg-background/15">
-              <Cross className="size-5 text-destructive" strokeWidth={2.5} />
+            <span className="grid size-12 place-items-center overflow-hidden rounded-full bg-background">
+              <img
+                src={logoAsset.url}
+                alt="Gospel Revival Evangelistic Church logo"
+                className="size-11 object-contain"
+              />
             </span>
             <div>
               <p className="font-display text-lg font-bold">G.R.E.C.</p>
