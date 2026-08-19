@@ -126,13 +126,13 @@ export function SiteNav() {
                 {l.label}
               </a>
             ))}
-            <a
+            {/* <a
               href="#visit"
               onClick={() => setOpen(false)}
               className="mt-5 mb-4 inline-flex h-12 items-center justify-center rounded-full bg-destructive px-6 font-semibold text-destructive-foreground"
             >
               Plan Your Visit
-            </a>
+            </a> */}
           </nav>
         </div>
       )}
