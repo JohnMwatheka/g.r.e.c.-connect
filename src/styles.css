@@ -46,6 +46,8 @@
   --color-sky: var(--sky);
   --color-sky-foreground: var(--sky-foreground);
   --color-surface: var(--surface);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-foreground: var(--whatsapp-foreground);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
@@ -70,6 +72,9 @@
   --background: oklch(1 0 0);
   --foreground: oklch(0.19 0 0);
   --surface: oklch(0.978 0.002 247);
+
+  --whatsapp: oklch(from #25D366 l c h);
+  --whatsapp-foreground: oklch(1 0 0);
 
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.19 0 0);
