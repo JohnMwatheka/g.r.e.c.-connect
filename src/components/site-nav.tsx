@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logoAsset from "@/assets/grec-logo.png.asset.json";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -51,7 +50,7 @@ export function SiteNav() {
             )}
           >
             <img
-              src={logoAsset.url}
+              src="/grec-logo.png"
               alt="Gospel Revival Evangelistic Church logo"
               className="size-11 object-contain"
             />
