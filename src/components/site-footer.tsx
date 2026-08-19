@@ -1,5 +1,4 @@
 import { Facebook, Instagram, Youtube, Mail } from "lucide-react";
-import logoAsset from "@/assets/grec-logo.png.asset.json";
 
 const quickLinks = ["About", "Sermons", "Events", "Gallery", "Give", "Contact"];
 const ministries = [
