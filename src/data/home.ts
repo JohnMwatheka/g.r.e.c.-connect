@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 //src/data/home.ts
 import {
   BookOpen,
@@ -17,6 +18,20 @@ import youth from "@/assets/youth.jpg";
 import children from "@/assets/children.jpg";
 import outreach from "@/assets/outreach.jpg";
 import baptism from "@/assets/baptism.jpg";
+
+// New gallery images
+import img1 from "@/assets/1.jpg";
+import img2 from "@/assets/2.jpg";
+import img3 from "@/assets/3.jpg";
+import img4 from "@/assets/4.jpg";
+import img5 from "@/assets/5.jpg";
+import img6 from "@/assets/6.jpg";
+import img7 from "@/assets/7.jpg";
+import img8 from "@/assets/8.jpg";
+import img9 from "@/assets/9.jpg";
+import img10 from "@/assets/10.jpg";
+import img11 from "@/assets/11.jpg";
+import img12 from "@/assets/12.jpg";
 
 export const serviceTimes = [
   { day: "Sunday", name: "First Service", time: "7:30 AM" },
@@ -139,13 +154,41 @@ export const sermons = [
   },
 ];
 
-export const gallery = [
+// Original 6 images (Slide 1)
+export const gallerySlide1 = [
   { src: choir, alt: "Church choir worshipping", span: "row-span-2" },
   { src: youth, alt: "Youth fellowship outdoors", span: "" },
   { src: baptism, alt: "Baptism service by the river", span: "" },
   { src: outreach, alt: "Community outreach food distribution", span: "row-span-2" },
   { src: children, alt: "Children's ministry class", span: "" },
-  { src: sanctuary, alt: "Church sanctuary interior", span: "" },
+  { src: img5, alt: "Church sanctuary interior", span: "" },
+];
+
+// New images 1–6 (Slide 2)
+export const gallerySlide2 = [
+  { src: img1, alt: "Church moment 1", span: "row-span-2" },
+  { src: img2, alt: "Church moment 2", span: "" },
+  { src: img3, alt: "Church moment 3", span: "" },
+  { src: img4, alt: "Church moment 4", span: "row-span-2" },
+  { src: img5, alt: "Church moment 5", span: "" },
+  { src: img6, alt: "Church moment 6", span: "" },
+];
+
+// New images 7–12 (Slide 3)
+export const gallerySlide3 = [
+  { src: img7, alt: "Church moment 7", span: "row-span-2" },
+  { src: img8, alt: "Church moment 8", span: "" },
+  { src: img9, alt: "Church moment 9", span: "" },
+  { src: img10, alt: "Church moment 10", span: "row-span-2" },
+  { src: img11, alt: "Church moment 11", span: "" },
+  { src: img12, alt: "Church moment 12", span: "" },
+];
+
+// Keep a flat list for the mobile carousel
+export const gallery = [
+  ...gallerySlide1,
+  ...gallerySlide2,
+  ...gallerySlide3,
 ];
 
 export const testimonials = [

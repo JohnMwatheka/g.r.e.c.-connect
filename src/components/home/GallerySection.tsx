@@ -4,7 +4,14 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { motion } from "framer-motion";
-import { gallery } from "@/data/home";
+import {
+  gallery,
+  gallerySlide1,
+  gallerySlide2,
+  gallerySlide3,
+} from "@/data/home";
+
+const desktopSlides = [gallerySlide1, gallerySlide2, gallerySlide3];
 
 function DotButton({
   selected,
@@ -28,7 +35,7 @@ function DotButton({
 }
 
 export function GallerySection() {
-  // ---------- Desktop carousel (3 identical full masonry slides) ----------
+  // ---------- Desktop ----------
   const autoplayDesktop = useRef(
     Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
@@ -52,7 +59,7 @@ export function GallerySection() {
     };
   }, [emblaApiDesktop, onSelectDesktop]);
 
-  // ---------- Mobile carousel (peek style) ----------
+  // ---------- Mobile ----------
   const autoplayMobile = useRef(
     Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
@@ -76,13 +83,9 @@ export function GallerySection() {
     };
   }, [emblaApiMobile, onSelectMobile]);
 
-  // We create 3 identical slides, each containing all 6 images
-  const desktopSlides = [0, 1, 2];
-
   return (
     <section id="gallery" className="section-y">
       <div className="shell">
-        {/* Header */}
         <motion.div
           className="max-w-2xl"
           initial={{ opacity: 0, y: 30 }}
@@ -98,18 +101,17 @@ export function GallerySection() {
           </h2>
         </motion.div>
 
-        {/* ========== DESKTOP — 3 slides, each with full 6-image masonry ========== */}
+        {/* ========== DESKTOP — 3 slides, each with 6 images ========== */}
         <div className="mt-14 hidden lg:block">
           <div className="overflow-hidden" ref={emblaRefDesktop}>
             <div className="flex">
-              {desktopSlides.map((slideIndex) => (
+              {desktopSlides.map((slideImages, slideIndex) => (
                 <div
                   key={slideIndex}
                   className="min-w-0 flex-[0_0_100%] px-1"
                 >
-                  {/* Exact original masonry layout */}
                   <div className="grid auto-rows-45 grid-cols-2 gap-4 sm:auto-rows-55 lg:grid-cols-3">
-                    {gallery.map((g) => (
+                    {slideImages.map((g) => (
                       <div
                         key={`${slideIndex}-${g.alt}`}
                         className={`zoom-media overflow-hidden rounded-2xl ${g.span}`}
@@ -130,7 +132,6 @@ export function GallerySection() {
             </div>
           </div>
 
-          {/* Desktop dots */}
           <div className="mt-8 flex justify-center gap-2">
             {desktopSlides.map((_, i) => (
               <DotButton
@@ -142,13 +143,13 @@ export function GallerySection() {
           </div>
         </div>
 
-        {/* ========== MOBILE — peek carousel (≈1.25 images) ========== */}
+        {/* ========== MOBILE — all 18 images in peek carousel ========== */}
         <div className="mt-14 lg:hidden">
           <div className="overflow-hidden" ref={emblaRefMobile}>
             <div className="flex touch-pan-y">
-              {gallery.map((g) => (
+              {gallery.map((g, idx) => (
                 <div
-                  key={g.alt}
+                  key={`${g.alt}-${idx}`}
                   className="min-w-0 flex-[0_0_80%] pr-4"
                 >
                   <div className="zoom-media aspect-4/3 overflow-hidden rounded-2xl">
@@ -166,7 +167,6 @@ export function GallerySection() {
             </div>
           </div>
 
-          {/* Mobile dots */}
           <div className="mt-6 flex justify-center gap-2">
             {gallery.map((_, i) => (
               <DotButton

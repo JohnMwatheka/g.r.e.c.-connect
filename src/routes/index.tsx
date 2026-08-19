@@ -40,6 +40,7 @@ import outreach from "@/assets/outreach.jpg";
 import baptism from "@/assets/baptism.jpg";
 import { PastorSection } from "@/components/home/PastorSection";
 import { GallerySection } from "@/components/home/GallerySection";
+import { ContactSection } from "@/components/home/ContactSection";
 
 const title = "G.R.E.C. — Gospel Revival Evangelistic Church | Welcome Home";
 const description =
@@ -209,7 +210,7 @@ function Index() {
         <BeliefsSection/>
 
         {/* MINISTRIES */}
-        <section id="ministries" className="section-y bg-surface">
+        {/* <section id="ministries" className="section-y bg-surface">
           <div className="shell">
             <Reveal className="max-w-2xl">
               <p className="text-xs font-semibold tracking-[0.2em] text-destructive uppercase">
@@ -267,10 +268,10 @@ function Index() {
               </a>
             </Reveal>
           </div>
-        </section>
+        </section> */}
 
         {/* EVENTS */}
-        <section id="events" className="section-y">
+        {/* <section id="events" className="section-y">
           <div className="shell">
             <Reveal className="max-w-2xl">
               <p className="text-xs font-semibold tracking-[0.2em] text-destructive uppercase">
@@ -317,10 +318,10 @@ function Index() {
               </a>
             </Reveal>
           </div>
-        </section>
+        </section> */}
 
         {/* SERMONS */}
-        <section id="sermons" className="section-y bg-surface">
+        {/* <section id="sermons" className="section-y bg-surface">
           <div className="shell">
             <Reveal className="max-w-2xl">
               <p className="text-xs font-semibold tracking-[0.2em] text-destructive uppercase">
@@ -363,13 +364,13 @@ function Index() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* GALLERY */}
         <GallerySection/>
 
         {/* TESTIMONIALS */}
-        <section className="section-y bg-surface">
+        {/* <section className="section-y bg-surface">
           <div className="shell">
             <Reveal className="mx-auto max-w-2xl text-center">
               <p className="text-xs font-semibold tracking-[0.2em] text-destructive uppercase">
@@ -390,10 +391,10 @@ function Index() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* PRAYER */}
-        <section id="prayer" className="section-y">
+        {/* <section id="prayer" className="section-y">
           <div className="shell grid gap-12 lg:grid-cols-2 lg:gap-20">
             <Reveal>
               <p className="text-xs font-semibold tracking-[0.2em] text-destructive uppercase">
@@ -452,10 +453,10 @@ function Index() {
               </form>
             </Reveal>
           </div>
-        </section>
+        </section> */}
 
         {/* GIVING */}
-        <section id="give" className="section-y">
+        {/* <section id="give" className="section-y">
           <div className="shell">
             <Reveal className="gradient-sky overflow-hidden rounded-3xl px-8 py-16 text-center text-primary-foreground sm:px-16">
               <HandHeart className="mx-auto size-10" />
@@ -482,65 +483,10 @@ function Index() {
               </div>
             </Reveal>
           </div>
-        </section>
+        </section> */}
 
         {/* CONTACT / VISIT */}
-        <section id="contact" className="section-y bg-surface">
-          <div className="shell grid gap-12 lg:grid-cols-2 lg:gap-16">
-            <Reveal>
-              <span id="visit" className="block scroll-mt-28" />
-              <p className="text-xs font-semibold tracking-[0.2em] text-destructive uppercase">
-                Plan Your Visit
-              </p>
-              <h2 className="mt-4 font-display text-4xl leading-tight font-bold sm:text-5xl">
-                We'd love to meet you this Sunday
-              </h2>
-              <ul className="mt-10 space-y-6">
-                <li className="flex gap-4">
-                  <MapPin className="mt-1 size-5 shrink-0 text-primary" />
-                  <div>
-                    <p className="font-display font-semibold">Address</p>
-                    <p className="text-sm text-muted-foreground">
-                      The Lord's Fellowship Centre, Nairobi, Kenya
-                    </p>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <Phone className="mt-1 size-5 shrink-0 text-primary" />
-                  <div>
-                    <p className="font-display font-semibold">Phone</p>
-                    <p className="text-sm text-muted-foreground">+254 700 000 000</p>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <Mail className="mt-1 size-5 shrink-0 text-primary" />
-                  <div>
-                    <p className="font-display font-semibold">Email</p>
-                    <p className="text-sm text-muted-foreground">hello@grecchurch.org</p>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <Clock className="mt-1 size-5 shrink-0 text-primary" />
-                  <div>
-                    <p className="font-display font-semibold">Service Times</p>
-                    <p className="text-sm text-muted-foreground">
-                      Sunday 7:30 AM · 10:30 AM · Youth 12:30 PM
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </Reveal>
-            <Reveal delay={120} className="card-soft overflow-hidden">
-              <iframe
-                title="Map to Gospel Revival Evangelistic Church"
-                src="https://www.google.com/maps?q=Nairobi,Kenya&output=embed"
-                loading="lazy"
-                className="h-[420px] w-full border-0 lg:h-full lg:min-h-[520px]"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </Reveal>
-          </div>
-        </section>
+        <ContactSection/>
       </main>
 
       <SiteFooter />
