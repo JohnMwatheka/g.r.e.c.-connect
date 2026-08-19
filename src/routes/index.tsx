@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowRight,
@@ -24,15 +25,21 @@ import {
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
 import { Reveal, CountUp } from "@/components/reveal";
+import { WhatsAppButton } from "@/components/home/WhatsAppButton";
+import { HeroSection } from "@/components/home/HeroSection";
+import { ServiceTimes } from "@/components/home/ServiceTimes";
+import { AboutSection } from "@/components/home/AboutSection";
+import { BeliefsSection } from "@/components/home/BeliefSection";
 
-import heroWorship from "@/assets/hero-worship.jpg";
-import pastorPortrait from "@/assets/pastor.jpg";
+
 import sanctuary from "@/assets/sanctuary.jpg";
 import choir from "@/assets/choir.jpg";
 import youth from "@/assets/youth.jpg";
 import children from "@/assets/children.jpg";
 import outreach from "@/assets/outreach.jpg";
 import baptism from "@/assets/baptism.jpg";
+import { PastorSection } from "@/components/home/PastorSection";
+import { GallerySection } from "@/components/home/GallerySection";
 
 const title = "G.R.E.C. — Gospel Revival Evangelistic Church | Welcome Home";
 const description =
@@ -61,32 +68,93 @@ const serviceTimes = [
 ];
 
 const beliefs = [
-  { icon: Cross, title: "Christ Alone", text: "Salvation is found in Jesus Christ, crucified and risen for all." },
-  { icon: BookOpen, title: "The Word", text: "Scripture is God's inspired truth and the foundation of our life." },
+  {
+    icon: Cross,
+    title: "Christ Alone",
+    text: "Salvation is found in Jesus Christ, crucified and risen for all.",
+  },
+  {
+    icon: BookOpen,
+    title: "The Word",
+    text: "Scripture is God's inspired truth and the foundation of our life.",
+  },
   { icon: Flame, title: "Holy Spirit", text: "We live and serve empowered by the Spirit of God." },
   { icon: Users, title: "Fellowship", text: "We grow together as one welcoming family in Christ." },
-  { icon: HandHeart, title: "Service", text: "Faith expressed through love, compassion and outreach." },
-  { icon: Sparkles, title: "Revival", text: "We pray for renewal in our city, our nation and the world." },
+  {
+    icon: HandHeart,
+    title: "Service",
+    text: "Faith expressed through love, compassion and outreach.",
+  },
+  {
+    icon: Sparkles,
+    title: "Revival",
+    text: "We pray for renewal in our city, our nation and the world.",
+  },
 ];
 
 const ministryCards = [
-  { title: "Youth Ministry", text: "Teens and young adults growing bold in faith.", image: youth, icon: Flame },
-  { title: "Children Ministry", text: "Safe, joyful discipleship for our little ones.", image: children, icon: Baby },
-  { title: "Choir & Worship", text: "Leading the congregation into God's presence.", image: choir, icon: Music },
-  { title: "Evangelism", text: "Taking the Gospel to homes, streets and nations.", image: outreach, icon: Landmark },
+  {
+    title: "Youth Ministry",
+    text: "Teens and young adults growing bold in faith.",
+    image: youth,
+    icon: Flame,
+  },
+  {
+    title: "Children Ministry",
+    text: "Safe, joyful discipleship for our little ones.",
+    image: children,
+    icon: Baby,
+  },
+  {
+    title: "Choir & Worship",
+    text: "Leading the congregation into God's presence.",
+    image: choir,
+    icon: Music,
+  },
+  {
+    title: "Evangelism",
+    text: "Taking the Gospel to homes, streets and nations.",
+    image: outreach,
+    icon: Landmark,
+  },
 ];
 
 const ministryList = ["Women's Ministry", "Men's Ministry", "Prayer Ministry", "Bible Study"];
 
 const events = [
-  { date: "AUG 09", title: "Annual Revival Conference", detail: "Three nights of worship, teaching and prayer.", place: "Main Sanctuary · 5:00 PM" },
-  { date: "AUG 23", title: "Youth Fire Night", detail: "Worship, testimonies and fellowship for ages 13–30.", place: "Youth Hall · 6:00 PM" },
-  { date: "SEP 06", title: "Community Open Air Crusade", detail: "Gospel outreach and free medical camp.", place: "Town Grounds · 9:00 AM" },
-  { date: "SEP 20", title: "Church Building Project Harvest", detail: "Celebrating what God is building among us.", place: "Main Sanctuary · 10:30 AM" },
+  {
+    date: "AUG 09",
+    title: "Annual Revival Conference",
+    detail: "Three nights of worship, teaching and prayer.",
+    place: "Main Sanctuary · 5:00 PM",
+  },
+  {
+    date: "AUG 23",
+    title: "Youth Fire Night",
+    detail: "Worship, testimonies and fellowship for ages 13–30.",
+    place: "Youth Hall · 6:00 PM",
+  },
+  {
+    date: "SEP 06",
+    title: "Community Open Air Crusade",
+    detail: "Gospel outreach and free medical camp.",
+    place: "Town Grounds · 9:00 AM",
+  },
+  {
+    date: "SEP 20",
+    title: "Church Building Project Harvest",
+    detail: "Celebrating what God is building among us.",
+    place: "Main Sanctuary · 10:30 AM",
+  },
 ];
 
 const sermons = [
-  { title: "Welcome Home: The Father's Heart", date: "20 July 2026", series: "Latest", image: sanctuary },
+  {
+    title: "Welcome Home: The Father's Heart",
+    date: "20 July 2026",
+    series: "Latest",
+    image: sanctuary,
+  },
   { title: "Faith That Moves Mountains", date: "13 July 2026", series: "Popular", image: choir },
   { title: "Living Water for Dry Seasons", date: "6 July 2026", series: "Series", image: baptism },
 ];
@@ -101,9 +169,23 @@ const gallery = [
 ];
 
 const testimonials = [
-  { name: "Grace W.", role: "Member since 2019", quote: "I walked in as a stranger and left as family. G.R.E.C. gave me a place to heal and grow." },
-  { name: "Peter O.", role: "Youth leader", quote: "The youth ministry shaped my faith and my future. Here I learned to serve with purpose." },
-  { name: "Mercy A.", role: "Women's fellowship", quote: "Every Sunday I leave encouraged. The teaching is sound and the love is genuine." },
+  {
+    name: "Grace W.",
+    role: "Member since 2019",
+    quote:
+      "I walked in as a stranger and left as family. G.R.E.C. gave me a place to heal and grow.",
+  },
+  {
+    name: "Peter O.",
+    role: "Youth leader",
+    quote:
+      "The youth ministry shaped my faith and my future. Here I learned to serve with purpose.",
+  },
+  {
+    name: "Mercy A.",
+    role: "Women's fellowship",
+    quote: "Every Sunday I leave encouraged. The teaching is sound and the love is genuine.",
+  },
 ];
 
 function Index() {
@@ -112,190 +194,19 @@ function Index() {
       <SiteNav />
       <main id="home">
         {/* HERO */}
-        <section className="relative isolate flex min-h-[100svh] items-center overflow-hidden">
-          <img
-            src={heroWorship}
-            alt="G.R.E.C. congregation worshipping together with hands raised"
-            width={1920}
-            height={1088}
-            className="absolute inset-0 -z-20 size-full scale-105 object-cover"
-          />
-          <div className="hero-overlay absolute inset-0 -z-10" />
-
-          <div className="shell pt-32 pb-16 text-primary-foreground">
-            <Reveal className="max-w-3xl">
-              <p className="inline-flex items-center gap-2 rounded-full bg-background/15 px-4 py-2 text-xs font-semibold tracking-[0.18em] uppercase backdrop-blur">
-                <Cross className="size-3.5 text-destructive" strokeWidth={3} />
-                The Lord's Fellowship Centre
-              </p>
-              <h1 className="mt-6 font-display text-5xl leading-[1.05] font-bold sm:text-6xl lg:text-7xl">
-                Welcome Home
-              </h1>
-              <p className="mt-4 font-display text-xl font-semibold text-primary-foreground/90 sm:text-2xl">
-                Gospel Revival Evangelistic Church
-              </p>
-              <p className="mt-5 max-w-xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
-                Experience God's love, grow in faith, and serve with purpose.
-              </p>
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="#visit"
-                  className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-destructive px-8 font-semibold text-destructive-foreground transition-transform duration-200 hover:scale-105"
-                >
-                  Plan Your Visit <ArrowRight className="size-4" />
-                </a>
-                <a
-                  href="#sermons"
-                  className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-primary-foreground/50 px-8 font-semibold text-primary-foreground backdrop-blur transition-colors hover:bg-background/15"
-                >
-                  <PlayCircle className="size-4" /> Watch Sermons
-                </a>
-              </div>
-            </Reveal>
-          </div>
-        </section>
+        <HeroSection/>
 
         {/* SERVICE TIMES */}
-        <section className="relative z-10 -mt-16 pb-4">
-          <div className="shell grid gap-5 sm:grid-cols-3">
-            {serviceTimes.map((s, i) => (
-              <Reveal key={s.name} delay={i * 100} className="card-soft p-7">
-                <Clock className="size-6 text-primary" />
-                <p className="mt-5 text-xs font-semibold tracking-[0.18em] text-muted-foreground uppercase">
-                  {s.day}
-                </p>
-                <p className="mt-2 font-display text-3xl font-bold text-foreground">{s.time}</p>
-                <p className="mt-1 text-sm text-muted-foreground">{s.name}</p>
-              </Reveal>
-            ))}
-          </div>
-        </section>
+        <ServiceTimes/>
 
         {/* ABOUT */}
-        <section id="about" className="section-y">
-          <div className="shell grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-            <Reveal className="zoom-media overflow-hidden rounded-3xl">
-              <img
-                src={sanctuary}
-                alt="Bright sanctuary interior at G.R.E.C."
-                loading="lazy"
-                width={1280}
-                height={1024}
-                className="h-[420px] w-full object-cover lg:h-[560px]"
-              />
-            </Reveal>
-            <Reveal delay={120}>
-              <p className="text-xs font-semibold tracking-[0.2em] text-destructive uppercase">
-                About Our Church
-              </p>
-              <h2 className="mt-4 font-display text-4xl leading-tight font-bold sm:text-5xl">
-                A family rooted in Christ, open to everyone
-              </h2>
-              <p className="mt-6 leading-relaxed text-muted-foreground">
-                For years G.R.E.C. has been a home of revival — a congregation that holds firmly to
-                traditional biblical values while reaching this generation with fresh hope. Whoever
-                you are and wherever you are on your journey, there is a seat for you here.
-              </p>
-              <dl className="mt-8 space-y-5">
-                {[
-                  { t: "Our Mission", d: "To preach the Gospel of Jesus Christ and disciple believers into maturity." },
-                  { t: "Our Vision", d: "A revived community transformed by the love and power of God." },
-                  { t: "Our Values", d: "Christ-centred worship, genuine welcome, family, integrity and service." },
-                ].map((v) => (
-                  <div key={v.t} className="border-l-2 border-destructive pl-5">
-                    <dt className="font-display font-semibold text-foreground">{v.t}</dt>
-                    <dd className="mt-1 text-sm leading-relaxed text-muted-foreground">{v.d}</dd>
-                  </div>
-                ))}
-              </dl>
-              <div className="mt-9 grid grid-cols-3 gap-4">
-                {[
-                  { n: 1200, s: "+", l: "Members" },
-                  { n: 8, s: "", l: "Ministries" },
-                  { n: 25, s: "+", l: "Years of service" },
-                ].map((st) => (
-                  <div key={st.l}>
-                    <p className="font-display text-3xl font-bold text-primary">
-                      <CountUp to={st.n} suffix={st.s} />
-                    </p>
-                    <p className="mt-1 text-xs text-muted-foreground">{st.l}</p>
-                  </div>
-                ))}
-              </div>
-              <a
-                href="#visit"
-                className="mt-9 inline-flex h-12 items-center gap-2 rounded-full bg-primary px-8 font-semibold text-primary-foreground transition-transform duration-200 hover:scale-105"
-              >
-                Become Part of Our Family <ArrowRight className="size-4" />
-              </a>
-            </Reveal>
-          </div>
-        </section>
+        <AboutSection/>
 
         {/* PASTOR */}
-        <section className="section-y bg-surface">
-          <div className="shell grid items-center gap-12 lg:grid-cols-[0.85fr_1fr] lg:gap-20">
-            <Reveal className="zoom-media overflow-hidden rounded-3xl shadow-[var(--shadow-card)]">
-              <img
-                src={pastorPortrait}
-                alt="Bishop Regina K. Mohammed, Senior Pastor of G.R.E.C."
-                loading="lazy"
-                width={1024}
-                height={1280}
-                className="h-[480px] w-full object-cover lg:h-[620px]"
-              />
-            </Reveal>
-            <Reveal delay={120}>
-              <p className="text-xs font-semibold tracking-[0.2em] text-destructive uppercase">
-                Meet Our Senior Pastor
-              </p>
-              <h2 className="mt-4 font-display text-4xl leading-tight font-bold sm:text-5xl">
-                Bishop Regina K. Mohammed
-              </h2>
-              <Quote className="mt-8 size-8 text-sky" />
-              <p className="mt-4 text-lg leading-relaxed text-muted-foreground italic">
-                "Our doors are open and our hearts are wider still. Whatever season you are walking
-                through, God has not forgotten you. Come and worship with us — you will find a
-                family that prays with you and stands with you."
-              </p>
-              <p className="mt-6 leading-relaxed text-muted-foreground">
-                Bishop Regina has served the Lord's Fellowship Centre for over two decades, leading
-                with warmth, sound teaching and a passion for revival across the community.
-              </p>
-              <a
-                href="#contact"
-                className="mt-9 inline-flex h-12 items-center gap-2 rounded-full border border-primary px-8 font-semibold text-primary transition-colors hover:bg-accent"
-              >
-                Read Full Message <ArrowRight className="size-4" />
-              </a>
-            </Reveal>
-          </div>
-        </section>
+        <PastorSection/>
 
         {/* BELIEFS */}
-        <section className="section-y">
-          <div className="shell">
-            <Reveal className="mx-auto max-w-2xl text-center">
-              <p className="text-xs font-semibold tracking-[0.2em] text-destructive uppercase">
-                What We Believe
-              </p>
-              <h2 className="mt-4 font-display text-4xl leading-tight font-bold sm:text-5xl">
-                Core beliefs that anchor us
-              </h2>
-            </Reveal>
-            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {beliefs.map((b, i) => (
-                <Reveal key={b.title} delay={i * 80} className="card-soft h-full p-8">
-                  <span className="gradient-sky grid size-12 place-items-center rounded-2xl">
-                    <b.icon className="size-5 text-primary-foreground" />
-                  </span>
-                  <h3 className="mt-6 font-display text-xl font-semibold">{b.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{b.text}</p>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
+        <BeliefsSection/>
 
         {/* MINISTRIES */}
         <section id="ministries" className="section-y bg-surface">
@@ -398,7 +309,10 @@ function Index() {
               ))}
             </ol>
             <Reveal className="mt-4">
-              <a href="#events" className="inline-flex items-center gap-2 font-semibold text-primary">
+              <a
+                href="#events"
+                className="inline-flex items-center gap-2 font-semibold text-primary"
+              >
                 See All Events <ArrowRight className="size-4" />
               </a>
             </Reveal>
@@ -452,36 +366,7 @@ function Index() {
         </section>
 
         {/* GALLERY */}
-        <section id="gallery" className="section-y">
-          <div className="shell">
-            <Reveal className="max-w-2xl">
-              <p className="text-xs font-semibold tracking-[0.2em] text-destructive uppercase">
-                Gallery
-              </p>
-              <h2 className="mt-4 font-display text-4xl leading-tight font-bold sm:text-5xl">
-                Moments from our church life
-              </h2>
-            </Reveal>
-            <div className="mt-14 grid auto-rows-[180px] grid-cols-2 gap-4 sm:auto-rows-[220px] lg:grid-cols-3">
-              {gallery.map((g, i) => (
-                <Reveal
-                  key={g.alt}
-                  delay={i * 70}
-                  className={`zoom-media rounded-2xl ${g.span}`}
-                >
-                  <img
-                    src={g.src}
-                    alt={g.alt}
-                    loading="lazy"
-                    width={1024}
-                    height={1024}
-                    className="size-full object-cover"
-                  />
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
+        <GallerySection/>
 
         {/* TESTIMONIALS */}
         <section className="section-y bg-surface">
@@ -522,7 +407,8 @@ function Index() {
                 confidentiality and covered in prayer by our intercessors.
               </p>
               <p className="mt-8 inline-flex items-center gap-3 rounded-2xl bg-accent px-6 py-4 text-sm font-medium text-accent-foreground">
-                <Heart className="size-4" /> "Cast all your anxiety on Him because He cares for you."
+                <Heart className="size-4" /> "Cast all your anxiety on Him because He cares for
+                you."
               </p>
             </Reveal>
             <Reveal delay={120} className="card-soft p-8">
@@ -659,22 +545,8 @@ function Index() {
 
       <SiteFooter />
 
-      <a
-        href="https://wa.me/254700000000?text=Hello%20G.R.E.C.%2C%20I%20would%20like%20to%20connect"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Chat on WhatsApp"
-        className="fixed right-5 bottom-6 z-50 flex h-14 max-w-[3.5rem] items-center overflow-hidden rounded-full bg-whatsapp text-whatsapp-foreground shadow-[var(--shadow-lift)] transition-all duration-300 ease-out hover:max-w-[12rem] focus-visible:max-w-[12rem] active:max-w-[12rem] hover:[&>span:last-child]:opacity-100 focus-visible:[&>span:last-child]:opacity-100 active:[&>span:last-child]:opacity-100"
-      >
-        <span className="grid size-14 shrink-0 place-items-center">
-          <svg viewBox="0 0 24 24" fill="currentColor" className="size-6" aria-hidden="true">
-            <path d="M12.05 0C5.49 0 .157 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413A11.815 11.815 0 0012.05 0zm7.423 18.785a9.87 9.87 0 01-5.031 1.378h-.004a9.86 9.86 0 01-5.26-1.51l-.374-.235-3.648.998.982-3.741-.214-.361A9.86 9.86 0 011.7 11.892c0-5.452 4.434-9.887 9.887-9.887 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm-3.175-5.403c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-          </svg>
-        </span>
-        <span className="whitespace-nowrap pr-5 text-sm font-semibold opacity-0 transition-opacity duration-300">
-          Chat on WhatsApp
-        </span>
-      </a>
+      <WhatsAppButton />
+
     </div>
   );
 }

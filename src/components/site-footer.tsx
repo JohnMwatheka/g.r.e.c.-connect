@@ -117,7 +117,9 @@ export function SiteFooter() {
 
       <div className="border-t border-primary-foreground/15">
         <div className="shell flex flex-col gap-2 py-6 text-xs text-primary-foreground/70 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Gospel Revival Evangelistic Church. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Gospel Revival Evangelistic Church. All rights reserved.
+          </p>
           <p>Christ-centred · Welcoming · Community-focused</p>
         </div>
       </div>

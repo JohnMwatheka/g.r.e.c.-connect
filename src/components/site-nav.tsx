@@ -5,12 +5,12 @@ import { cn } from "@/lib/utils";
 const links = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Ministries", href: "#ministries" },
-  { label: "Sermons", href: "#sermons" },
-  { label: "Events", href: "#events" },
-  { label: "Youth", href: "#ministries" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Give", href: "#give" },
+  // { label: "Ministries", href: "#ministries" },
+  // { label: "Sermons", href: "#sermons" },
+  // { label: "Events", href: "#events" },
+  // { label: "Youth", href: "#ministries" },
+  // { label: "Gallery", href: "#gallery" },
+  // { label: "Give", href: "#give" },
   { label: "Contact", href: "#contact" },
 ];
 

@@ -73,7 +73,7 @@
   --foreground: oklch(0.19 0 0);
   --surface: oklch(0.978 0.002 247);
 
-  --whatsapp: oklch(from #25D366 l c h);
+  --whatsapp: oklch(from #25d366 l c h);
   --whatsapp-foreground: oklch(1 0 0);
 
   --card: oklch(1 0 0);
