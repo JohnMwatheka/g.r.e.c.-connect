@@ -24,7 +24,7 @@ export function ContactSection() {
               <div>
                 <p className="font-display font-semibold">Address</p>
                 <p className="text-sm text-muted-foreground">
-                  The Lord's Fellowship Centre (Mlolongo)
+                  GREC CHURCH HQ (Mlolongo)
                   <br />
                   P.O. Box 438 – 00507, Nairobi, Kenya
                 </p>
