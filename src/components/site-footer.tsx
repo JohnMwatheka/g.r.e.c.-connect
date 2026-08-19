@@ -18,7 +18,7 @@ export function SiteFooter() {
           <div className="flex items-center gap-3">
             <span className="grid size-12 place-items-center overflow-hidden rounded-full bg-background">
               <img
-                src={logoAsset.url}
+                src="/grec-logo.png"
                 alt="Gospel Revival Evangelistic Church logo"
                 className="size-11 object-contain"
               />

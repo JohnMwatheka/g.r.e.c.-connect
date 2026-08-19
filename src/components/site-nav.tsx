@@ -50,7 +50,7 @@ export function SiteNav() {
             )}
           >
             <img
-              src={logoAsset.url}
+              src="/grec-logo.png"
               alt="Gospel Revival Evangelistic Church logo"
               className="size-11 object-contain"
             />
